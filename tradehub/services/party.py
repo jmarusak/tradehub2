@@ -1,7 +1,7 @@
 from typing import Optional
 
-from ..model import Party
-from ..mockdb import Database
+from ..models import Party
+from ..datastore import Database
 
 class PartyService:
     def __init__(self, db: Database):

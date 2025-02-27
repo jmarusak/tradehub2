@@ -1,9 +1,8 @@
-from hub.model import Party
-from hub.service import PartyService
-from hub.mockdb import Database
+from tradehub.services import PartyService
+from tradehub.datastore import Database
 
 def main():
-    db = Database("hub/mockdb/database.json")
+    db = Database("tradehub/datastore/database.json")
     partyService = PartyService(db)
     partyService.delete("0")
     parties = partyService.getAll()
